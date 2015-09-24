@@ -1,0 +1,27 @@
+// Settings.
+$config: (
+	subordinate:		#DEDBD9,
+	primary:			#0C2D46,
+	accent:				#623030,
+	body-focus:			#E1C6A2,
+
+	max-length:			35em,
+
+	animation:			0.25s,
+	logo-font:			serif,
+	width:				90%,
+	max-width:			60em
+);
+
+$breakpoints: (
+	tiny:				641px, //768+ ipad 640px normal
+	small:				801px,
+	medium:				961px,
+	large:				1345px
+);
+
+// Reset.
+@import "framework", "sass-web-fonts/web-fonts";
+
+// Google fonts.
+@include web-fonts(("Roboto": "300"), ("Roboto Slab": ("100", "400", "700")));
