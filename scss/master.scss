@@ -25,3 +25,151 @@ $breakpoints: (
 
 // Google fonts.
 @include web-fonts(("Roboto": "300"), ("Roboto Slab": ("100", "400", "700")));
+
+div#body > div, footer, header > div {
+	@extend %centered;
+	@extend %clearfix;
+	padding-top: 1.5em;
+}
+div#body {
+	background-color: #fff;
+}
+
+header {
+	background: #fad;
+}
+
+body {
+	background-color: darken(config(subordinate),10%);
+	font: 1.0em/1.5 "Roboto Slab";
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin: 0 0 1.5em 0;
+}
+
+header {
+	h1 {
+		float: left;
+		margin: 0;
+		padding: 0.75em 0;
+		font: 1.0em/1.5 Roboto;
+		font-weight: bold;
+	}
+
+	// Menu!
+	//	Both!
+	label {
+		display: block;
+		&[for="topmenu"] {
+			a {
+	//			General link styling.
+				color: config(subordinate);
+				display: block;
+				padding: 0.75em 1.0em;
+				text-decoration: none;
+				&:hover {
+					background-color: config(primary);
+					color: lighten(config(subordinate),20%);
+				}
+			}
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				white-space: nowrap;
+				ul {
+					background-color: lighten(config(primary),10%);
+					height: 0;
+					overflow: hidden;
+				}
+			}
+		}
+	}
+	nav {
+		@extend %clearfix;
+		position: relative;
+		input {
+			display: none;
+		}
+	}
+
+	//	Small screen.
+	@media (max-width: 800px) {
+		div {
+			width: 100%;
+		}
+		h1 {
+			margin-left: 1.0em;
+		}
+		input:checked {
+			& + label::before {
+				content: 'Close \00a0 \2715'; // Close
+			}
+			& + label ul {
+				height: auto;
+			}
+		}
+		label {
+			&[for="topmenu"] {
+				ul {
+					background-color: lighten(config(primary),10%);
+					clear: both;
+					height: 0;
+					overflow: hidden;
+					li {
+						border-top: 1px solid config(primary);
+					}
+					ul a {
+						padding-left: 2.0em;
+					}
+				}
+				&::before {
+//					background-color: darken(config(subordinate),10%);
+					border: 0.1em solid #000;
+					border-radius: 1.5em;
+					content: 'Menu \00a0 \2261'; // MENU =
+					line-height: 2.3;
+					margin: 0.25em 1.25em 0.25em 0.25em;
+					padding: 0 0.65em;
+					position: absolute;
+					right: 0;
+					top: 0;
+				}
+			}
+		}
+	}
+
+	//	Full screen.
+	@media (min-width: 801px) {
+		label[for="topmenu"] {
+			li {
+				&:hover {
+					background-color: lighten(config(primary),10%);
+					ul {
+						height: auto;
+					}
+				}
+			}
+			ul {
+				text-align: right;
+				li {
+					display: inline-block;
+					position: relative;
+					ul {
+						left: auto;
+						position: absolute;
+						right: 0;
+						text-align: left;
+						li {
+							display: block;
+							float: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
