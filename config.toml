@@ -1,3 +1,5 @@
-baseurl = "http://yourSiteHere/"
+baseurl = "http://tenuouscheese.github.io/zaphod/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Zaphod theme demonstration"
+
+theme="Zaphod"
