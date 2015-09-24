@@ -3,8 +3,60 @@
 <head>
 	<meta charset="UTF-8">
 	<title>{{ .Title }}</title>
+	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<h1>{{ .Title}}</h1>
+	<header>
+		<div>
+			<h1>{{.Title}}</h1>
+			<nav>
+				<input type="checkbox" id="topmenu">
+				<label for="topmenu">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li>
+							<a href="#">Services</a>
+							<ul>
+								<li><a href="#">My menu 01</a></li>
+								<li><a href="#">Menu 02</a></li>
+								<li><a href="#">Menu 03</a></li>
+								<li><a href="#">Menu 04</a></li>
+								<li><a href="#">Menu 05</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Contact us</a></li>
+					</ul>
+				</label>
+			</nav>
+			<ul>
+				<li>
+					<p>Hello world</p>
+				</li>
+				<li>
+					<p>Hello world</p>
+				</li>
+				<li>
+					<p>Hello world</p>
+				</li>
+				<li>
+					<p>Hello world</p>
+				</li>
+				<li>
+					<p>Hello world</p>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<div id="body">
+		<div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, nemo, earum, rem beatae neque soluta corrupti voluptatum vitae laborum quo blanditiis natus iusto quos possimus.</p>
+			<p>Expedita, odio debitis ratione suscipit error fugiat necessitatibus enim amet velit assumenda modi cupiditate rerum corporis minus ea quis explicabo officiis? Voluptas accusantium dignissimos optio?</p>
+			<p>Natus, quae inventore molestiae voluptas cupiditate illum tempora vero quas! Quia, ducimus quam similique obcaecati id ullam voluptatem iure nam dolorum reiciendis voluptates soluta sint!</p>
+			<p>Officia, totam, nisi atque perferendis quisquam architecto praesentium natus nulla impedit at. Minus, quod, tempora, cumque, blanditiis quas rem dicta perspiciatis modi voluptatibus inventore temporibus.</p>
+		</div>
+	</div>
+	<footer>
+		<p>&copy; Some Company Name Ltd.</p>
+	</footer>
 </body>
 </html>
