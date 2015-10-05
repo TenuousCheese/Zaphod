@@ -12,84 +12,115 @@ div#body > div:after, footer:after, header > div:after, header nav:after {
 div#body > div, footer, header > div, header nav {
   zoom: 1; }
 
-div#body > div, footer, header > div {
-  padding-top: 1.5em; }
-
 div#body {
-  background-color: #fff; }
+  background-color: #DEDBD9; }
 
 header {
-  background: #fad; }
+  background: center center #fff url("/zaphod/images/hero.jpg") no-repeat;
+  background-size: cover; }
 
 body {
   background-color: #c6c1be;
-  font: 1.0em/1.5 "Roboto Slab";
+  color: #0C2D46;
+  font: 1.0em/1.5 "Roboto";
   margin: 0;
   padding: 0; }
+
+form {
+  display: block;
+  float: right;
+  width: 100%; }
+  @media (min-width: 800px) {
+    form {
+      width: 50%; }
+      form div {
+        -moz-column-count: 2;
+        -moz-column-gap: 0.75em;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 0.75em;
+        column-count: 2;
+        column-gap: 0.75em; } }
+  form input, form label, form textarea {
+    border: none;
+    box-sizing: border-box;
+    display: block;
+    font: 1.0em/1.5 "Roboto";
+    margin: 0;
+    outline: none;
+    padding: 0.75em 0 0 0;
+    width: 100%; }
+  form input, form textarea {
+    background-color: #6bb1e6;
+    padding: 0.75em;
+    margin-top: 0.75em; }
+    form input:focus, form textarea:focus {
+      background-color: #d8eaf8; }
+  form input[type="submit"] {
+    border-radius: 0.5em;
+    margin: 3.0em 0 1.5em 0; }
+    form input[type="submit"]:hover {
+      background-color: #d8eaf8; }
 
 p {
   margin: 0 0 1.5em 0; }
 
 header h1 {
+  background: center left url("/zaphod/images/logo.svg") no-repeat;
+  background-size: contain;
+  color: #0C2D46;
   float: left;
-  margin: 0;
-  padding: 0.75em 0;
-  font: 1.0em/1.5 Roboto;
+  margin: 0.1em 0;
+  padding: 0.65em 0 0.65em 3.0em;
+  font: 1.0em/1.5 "Roboto Slab";
   font-weight: bold; }
-header label {
-  display: block; }
-  header label[for="topmenu"] a {
-    color: #DEDBD9;
-    display: block;
-    padding: 0.75em 1.0em;
-    text-decoration: none; }
-    header label[for="topmenu"] a:hover {
-      background-color: #0C2D46;
-      color: white; }
-  header label[for="topmenu"] ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    white-space: nowrap; }
-    header label[for="topmenu"] ul ul {
-      background-color: #134972;
-      height: 0;
-      overflow: hidden; }
+header label[for="topmenu"] a {
+  color: #0C2D46;
+  display: block;
+  padding: 0.75em 1.0em;
+  text-decoration: none; }
+  header label[for="topmenu"] a:hover {
+    background-color: #f6f5f4; }
+header label[for="topmenu"] ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap; }
+  header label[for="topmenu"] ul ul {
+    background-color: white;
+    height: 0;
+    overflow: hidden; }
 header nav {
   position: relative; }
   header nav input {
     display: none; }
 @media (max-width: 800px) {
-  header div {
-    width: 100%; }
-  header h1 {
-    margin-left: 1.0em; }
   header input:checked + label::before {
     content: 'Close \00a0 \2715'; }
   header input:checked + label ul {
     height: auto; }
   header label[for="topmenu"] ul {
-    background-color: #134972;
+    background-color: white;
     clear: both;
     height: 0;
     overflow: hidden; }
     header label[for="topmenu"] ul li {
-      border-top: 1px solid #0C2D46; }
+      border-top: 1px solid #6bb1e6; }
     header label[for="topmenu"] ul ul a {
       padding-left: 2.0em; }
   header label[for="topmenu"]::before {
-    border: 0.1em solid #000;
+    border: 0.1em solid #0C2D46;
     border-radius: 1.5em;
+    color: #0C2D46;
     content: 'Menu \00a0 \2261';
     line-height: 2.3;
-    margin: 0.25em 1.25em 0.25em 0.25em;
+    margin: 0.25em;
     padding: 0 0.65em;
     position: absolute;
     right: 0;
     top: 0; } }
 @media (min-width: 801px) {
   header label[for="topmenu"] li:hover {
-    background-color: #134972; }
+    background-color: white; }
     header label[for="topmenu"] li:hover ul {
       height: auto; }
   header label[for="topmenu"] ul {
