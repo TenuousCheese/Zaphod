@@ -1,3 +1,3 @@
 # Zaphod
 
-A simple **Hugo** theme for small businesses.
+A simple, fully responsive **Hugo** theme for small businesses.
